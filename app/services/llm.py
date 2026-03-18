@@ -10,7 +10,7 @@ def load_model():
     if model is None:
         print("Loading model...")
 
-        model_name = "Qwen/Qwen2.5-3B-Instruct"
+        model_name = "TinyLlama/TinyLlama-1.1B-Chat-v1.0"
 
         tokenizer = AutoTokenizer.from_pretrained(model_name)
         model = AutoModelForCausalLM.from_pretrained(

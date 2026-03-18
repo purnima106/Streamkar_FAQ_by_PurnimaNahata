@@ -10,7 +10,7 @@ This service acts as a complete Retrieval-Augmented Generation (RAG) backend:
 
 1. **Ingestion Flow**: Raw FAQs → sentence-transformers Embeddings → Qdrant Vector DB
 2. **Retrieval Flow**: User Query → Embedding → Similarity Search → Retrieved Context
-3. **Generation Flow**: Context + Query → Prompt Engineering → Qwen2.5-7B LLM → Filtered Answer
+3. **Generation Flow**: Context + Query → Prompt Engineering → TinyLlama/TinyLlama-1.1B-Chat-v1.0 → Filtered Answer
 
 **Guardrails Implemented**: 
 - Responses restricted to verified contexts.
@@ -74,3 +74,5 @@ docker run -p 8000:8000 streamkar-bot
 - Use asynchronous LLM serving models for high-concurrency (e.g. vLLM or OpenAI).
 - Advanced reranking for context extraction (Cross-Encoders).
 - Session tracking and contextual multi-turn conversation support.
+
+
