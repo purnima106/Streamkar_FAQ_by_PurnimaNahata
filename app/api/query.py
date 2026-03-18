@@ -13,6 +13,9 @@ def ask_question(data: QueryRequest):
 
     context, score = retrieve_context(embedding)
 
+    print("Retrieved Context:\n", context)
+    print("Score:", score)
+
     if score < 0.5:
         return {"answer": "I don't have enough information to answer that."}
 
@@ -21,3 +24,4 @@ def ask_question(data: QueryRequest):
     log_query(data.query, answer)
 
     return {"answer": answer}
+

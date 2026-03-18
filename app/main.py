@@ -8,5 +8,9 @@ app = FastAPI()
 def startup():
     create_collection()
 
+@app.get("/")
+def root():
+    return {"message": "StreamKar FAQ Bot is running 🚀"}
+
 app.include_router(faq.router)
 app.include_router(query.router)
